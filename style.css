@@ -1,0 +1,161 @@
+.flex-grid {
+    display: flex;
+    justify-content: space-around;
+    
+    
+  }
+  .col {
+    flex: 1;
+  }
+  
+  .row {
+    color: white;
+    border: #86CB92 solid 1px;
+    background-color: blue;
+    text-align: center;
+    
+    font-size:3rem;
+    
+    height: 16vh;
+  }
+  .flip-card {
+    background-color:transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    border: #86CB92 solid 1px;
+    display:block;
+    
+  
+    
+  
+  }
+ 
+  .flip-card-inner {
+    position: relative;
+  
+    height:100%;
+    
+    text-align: center;
+   
+    transition: transform 2.6s;
+    transform-style: preserve-3d;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   
+  }
+  
+  .flip-card.flip-card-inner {
+    transform: rotateX(540deg) ;
+
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+   
+  
+  }
+
+
+  /* .flip-card-inner.answered{
+    transform: rotateX(540deg);
+    z-index: 1;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: green;
+  }
+ */
+  .player-grid{
+    display:flex;
+    justify-content:space-between;
+    height:500px;
+    width:500px;
+    position:absolute;
+    top: 120vh;
+    
+    z-index:20;
+  }
+
+  .player{
+    
+    
+    height:100px;
+    width:100px;
+    position:fixed;
+    z-index: 10000;
+    top: 95vh;
+    left:50%;
+
+    color:white;
+    background-color: #86CB92;
+  }
+
+  .ai{
+    height: 100px;
+    width:100px;
+
+    position:fixed;
+    z-index: 10000;
+    top: 95vh;
+    left:70%;
+
+    color:white;
+    background-color: #86CB92;
+  }
+
+
+
+  .turn{
+    display:none;
+  }
+
+  
+  
+  .flip-card-front,
+  .flip-card-back {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+ 
+    background-color: blueviolet;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+ 
+  .flip-card-front {
+    
+    background-color: blue;
+    color: white;
+    
+  }
+  
+  .flip-card-back {
+
+    display: flex;
+    background-color: #050404;
+  
+   
+    height: 100%;
+    
+    
+    color: white;
+    transform:rotateX(540deg);
+   
+    
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    
+
+   
+  }
+
+  .flip-card.fullscreen{
+    position:absolute;
+    top:0px;
+    z-index: 1;
+  }
+
+  
